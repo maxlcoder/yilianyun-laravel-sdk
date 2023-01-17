@@ -1,5 +1,5 @@
 {
-    "name": "woody/yilianyun-laravel-sdk",
+    "name": "maxlcoder/yilianyun-laravel-sdk",
     "description": "易联云API Laravel SDK",
     "type": "library",
     "require": {},
