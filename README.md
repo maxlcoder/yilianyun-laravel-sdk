@@ -3,7 +3,7 @@
 
 使用：
 
-1. 配置文件生成
+1. 配置文件生成 `config/yilianyun.php`
 ```shell
 php artisan vendor:publish # 选择对应的扩展包
 ```
