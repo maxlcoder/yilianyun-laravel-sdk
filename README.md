@@ -14,3 +14,6 @@ YILIANYUN_HOST=xxx
 YILINAYUN_CLIENT_ID=xxxx
 YILIANYUN_CLIENT_SECRET=xxxx
 ```
+3. 打印内容处理
+    * 实现接口 `ContentContract`
+    * 通过 `generateContent()` 方法生成打印的内容，内容模版参考 [打印机指令](https://www.kancloud.cn/elind-dev/openapi/332006)
