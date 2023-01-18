@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
+use Woody\YiLianYun\Contract\ContentContract;
 use Woody\YiLianYun\Enum\ApiEnum;
 
 class YiLianYun
@@ -189,7 +190,7 @@ class YiLianYun
     }
 
     // 面单打印
-    public function textPrint($machineCode, $content = '', $idempotence = 1, $originId = '', $accessToken = null)
+    public function textPrint($machineCode, ContentContract $content = null, $idempotence = 1, $originId = '', $accessToken = null)
     {
         $api = $this->host . ApiEnum::TEXT_PRINT;
         $timestamp = time();
@@ -197,7 +198,7 @@ class YiLianYun
             'client_id' => $this->clientId,
             'access_token' => $accessToken,
             'machine_code' => $machineCode,
-            'content' => $content,
+            'content' => $content->generateContent(),
             'idempotence' => $idempotence,
             'origin_id' => $originId,
             'sign' => $this->sign($timestamp),
