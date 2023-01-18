@@ -13,5 +13,12 @@
             "name": "刘仁麟",
             "email": "liurenlin@hzanchu.com"
         }
-    ]
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Woody\\YiLianYun\\YiLianYunProvider"
+            ]
+        }
+    }
 }
